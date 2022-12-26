@@ -41,3 +41,4 @@
 192.168.56.1 - - [23/Dec/2022:06:00:45 +0000] "-" 408 0 "-" "-"
 192.168.56.1 - - [23/Dec/2022:08:10:18 +0000] "GET / HTTP/1.1" 200 22492 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
 192.168.56.1 - - [23/Dec/2022:08:11:10 +0000] "-" 408 0 "-" "-"
+192.168.56.1 - - [26/Dec/2022:22:34:01 +0000] "GET / HTTP/1.1" 200 22505 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
