@@ -19,8 +19,18 @@ RUN a2enmod proxy
 RUN a2enmod socache_shmcb
 RUN a2enmod ssl
 
-RUN service apache2 restart
 
 # copy and update the web config /web_config/apache2/ to /etc/apache2/
-COPY ./web_config/apache2/sites-enabled/* /etc/apache2/site-enabled/
+COPY ./web_config/apache2/sites-enabled/* /etc/apache2/sites-available/
+RUN rm -rf /etc/apache2/sites-enabled/*
 COPY ./web_config/apache2/conf-enabled/* /etc/apache2/conf-enabled/
+
+#RUN chown -R www-data:www-data /var/www/example/logs
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+RUN service apache2 restart
+
+RUN a2ensite 000-default.conf 
+
+EXPOSE 80
+
+CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
